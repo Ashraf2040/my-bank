@@ -1,6 +1,7 @@
 
 "use client"
 import axios from 'axios'
+import Image from 'next/image'
 
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -30,7 +31,7 @@ router.push("/")
  
   return (
       <div className='h-20 px-4 bg-[#407088] w-full flex static text-[#fffbe0]  items-center justify-between text-lg font-semibold '>
-          <div className=''><a href="/"><img className='w-24 rounded-lg h-16' src="./bank-3_1_0_0.jpg" alt="" /></a></div>
+          <div className=''><a href="/"><Image width={500} height={500}  className='w-24 rounded-lg h-16' src="./bank-3_1_0_0.jpg" alt="" /></a></div>
           <nav>
               <ul className='flex items-center justify-between gap-4'>
                   <li>Explore</li>
