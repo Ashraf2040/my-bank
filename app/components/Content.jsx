@@ -12,15 +12,15 @@ const Content = () => {
   
   return (
     <>
-    <div className=' rounded-sm   mt-12  gap-20  flex  justify-between '>
-   <div className='w-2/5 ml-8  '> 
+    <div className=' rounded-sm  justify-center  mt-12  gap-20  flex sm:flex-col lg:flex-row    '>
+   <div className='lg:w-2/5 ml-8 sm:w-4/5   '> 
 
     <p className='font-[800] text-4xl leading-10 mt-24 bg-gradient-to-b from-[#407088] to-[#ffb5b5] bg-clip-text text-transparent'> Enjoy our incredible online banking. <span className='block'>Millions of bilionairs are waiting....</span>   </p>
     <button className='text-[#fffbe0] px-4 py-2 mt-8 translate-x-28  font-bold text-2xl rounded-md bg-[#407088] shadow-xl  shadow-gray-500'> Join Now....</button>
     </div>
     
 
-    <div className='w-[800px] mr-2 '>
+    <div className='w-4/5 mr-2 '>
     <Carousel> 
                   <div> 
                       <Image className=' rounded-md' src='/1.png' alt='image1' width={500} height={500}/> 
@@ -54,8 +54,8 @@ const Content = () => {
      <div className='flex w-full justify-center h-20 font-bold text-4xl bg-gradient-to-r from-[#407088] to-[#ffb5b5] mt-40 mb-20 bg-clip-text text-transparent '>
           <p>About US 💫💫💫💫💫</p>
           </div>
-     <div className='flex gap-32 items-center' >
-      <div className='flex-1 flex flex-col gap-12'>
+     <div className='flex gap-32 items-center sm:flex-col md:flex-row' >
+      <div className='flex-1 flex flex-col gap-12 items-center'>
         <h1 className='font-bold text-[70px] leading-[1] bg-gradient-to-b from-[#194c33] to-[#ffb5b5] bg-clip-text text-transparent'>Better Investing for your Deposits.</h1>
         <p className='text-[24px] font-[300]'>Turning your idea to reality . We bring togrther the teams from the global finance industry.</p>
         <button className='p-5 py-3 bg-[#53c28b] border-none rounded-[5px] max-w-max'>See Our Works</button>
@@ -65,7 +65,7 @@ const Content = () => {
           <div className='flex w-full justify-center h-20 font-bold text-4xl bg-gradient-to-r from-[#407088] to-[#ffb5b5] bg-clip-text text-transparent mt-20 mb-20'>
           <p>Testimonials 💚💚💚</p>
           </div>
-   <div className='testmonials mb-40 pl-20 flex gap-20'>
+   <div className='testmonials mb-40 pl-20 flex gap-20 flex-wrap'>
      <div className='v1 flex flex-col relative h-72 border-4 w-72 p-8 rounded-xl border-r-[#95c2d8] shadow-lg' >
      <div className='flex items-center gap-4'>
      <Image width={500} height={500} className='rounded-[50%] w-[50px] h-[50px]' src='/v1.jpg'  alt='' />

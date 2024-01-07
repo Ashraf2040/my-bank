@@ -97,7 +97,7 @@ const Signup = () => {
            
               
               <button className='bg-[#407088] py-2 rounded-lg text-[#fffbe0] font-semibold' type='submit'>Sign Up</button>
-              <p className='text-center'>Have an account ? <Link className='text-red-900 font-semibold' href="/signin" > Sign In </Link> or <button className='text-[#36626a]' >Sign Up With Google</button></p>
+              <p className='text-center'>Have an account ? <Link className='text-red-900 font-semibold' href="/login" > Sign In </Link> or <button className='text-[#36626a]' >Sign Up With Google</button></p>
              
       </form>
     </div>

@@ -29,6 +29,7 @@ const fetchedData = async()=>{
   const response = await axios.get("api/auth/userData").then((reqs)=>reqs.data)
  const data = response.users
  const user = data.filter((user)=>user.email ===userEemail)
+ console.log(userEemail)
  const {username,credit:userCredit,AccountNo,IBAN,_id} = user[0]
 
 //  console.log(username,userCredit,withdraw,deposits,AccountNo,IBAN)
@@ -121,42 +122,42 @@ fetchedData()
       <div className={`opacity-${details?"1":"0"}`}>
       <p className='font-semibold text-[#407088] ml-16'>IBAN : {userIBAN}</p>
         <p className='font-semibold text-[#407088] ml-16'>Account No : {Accountnumber}</p></div></div>
-      <div className="line w-full   h-4 bg-[#407088]"></div> 
-      <div className="actions grid grid-cols-3 grid-rows-1 px-4 pr-8 gap-4 text-[#f1d18a] font-semibold " >
+      <div className="line w-full    h-4 bg-[#407088]"></div> 
+      <div className="actions grid w-full xs:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] lg:grid-cols-3 grid-rows-1 px-4 pr-8 gap-4 text-[#f1d18a] font-semibold " >
         
         
-        <div className="Deposite rounded-md bg-[#407088] h-48 col-span-1  flex flex-col gap-4 items-center justify-center ">
+        <div className="Deposite rounded-md bg-[#407088] p-2 h-fit col-span-1  flex flex-col gap-4 items-center justify-center ">
           <h1 className='font-bold text-center mb-4  text-[#fffbe0]'>Deposite</h1>
           
-          <div className='flex items-center justify-between w-4/5 text-[#fffbe0]'>
+          <div className='flex items-center justify-center gap-3 w-full text-[#fffbe0]'>
            
             
             <label htmlFor="amount"> Amount : </label>
-          <input type="number" id='amount' className='bg-[#fffbe0] text-[#407088] '
+          <input type="number" id='amount' className='bg-[#fffbe0] text-[#407088] min-w-fit '
           onChange={(e)=>setAmountDepo(e.target.value)} /></div>      
-        <div className='flex items-center justify-between w-4/5 text-[#fffbe0]'><label htmlFor="amount"> Acco. No : </label>
-          <input type="number" id='amount' className='bg-[#fffbe0] text-[#407088]  '
+        <div className='flex items-center justify-center gap-3 w-full text-[#fffbe0]'><label htmlFor="amount"> Acco. No : </label>
+          <input type="number" id='amount' className='bg-[#fffbe0] text-[#407088]   '
            onChange={(e)=>setAcc_No(e.target.value)
           } /></div>      
              <button className='px-2 text-center rounded-sm bg-[#fffbe0] text-[#407088]' onClick={depositeHandler}>Submit</button>
         </div>
-        <div className="Withdrawal rounded-md bg-[#407088] h-48 col-span-1  flex flex-col gap-4 items-center justify-center text-[#fffbe0] ">
+        <div className="Withdrawal rounded-md bg-[#407088] p-2 h-fit col-span-1  flex flex-col gap-4 items-center justify-center text-[#fffbe0] ">
                     <h1 className='font-bold text-center mb-4'>Withdraw</h1>
 
-          <div className='flex items-center justify-between w-4/5 text-[#fffbe0]'><label htmlFor="amount"> Amount : </label>
+          <div className='flex items-center justify-center gap-3 w-full text-[#fffbe0]'><label htmlFor="amount"> Amount : </label>
             
           <input type="number" id='amount' className='bg-[#fffbe0] text-[#407088]  ' onChange={(e)=>setAmountWithdraw(e.target.value)} /></div>      
-        <div className='flex items-center justify-between w-4/5 text-[#fffbe0]'><label htmlFor="amount"> Acco. no : </label>
+        <div className='flex items-center justify-center gap-3 w-full text-[#fffbe0]'><label htmlFor="amount"> Acco. no : </label>
             <input type="number" id='amount' className='bg-[#fffbe0] text-[#407088]  ' /></div> 
             <button className='px-2 text-center rounded-sm bg-[#fffbe0] text-[#407088]' onClick={withdrawalHandler}>Submit</button>
         
         </div>
-        <div className="Deposite rounded-md bg-[#407088] h-48 col-span-1  flex flex-col gap-4 items-center justify-center ">
+        <div className="Deposite rounded-md bg-[#407088] p-2 h-fit  col-span-1  flex flex-col gap-4 items-center justify-center ">
                   <h1 className='font-bold text-center mb-4 text-[#fffbe0]'>Request Loan</h1>
 
-          <div className='flex items-center justify-between w-4/5 text-[#fffbe0]'><label htmlFor="amount"> Amount : </label>
+          <div className='flex items-center justify-center gap-3 w-full text-[#fffbe0]'><label htmlFor="amount"> Amount : </label>
           <input type="number" id='amount' className='bg-[#fffbe0] text-[#407088]  ' /></div>      
-        <div className='flex items-center justify-between w-4/5 text-[#fffbe0]'><label htmlFor="amount"> Purpose : </label>
+        <div className='flex items-center justify-center gap-3 w-full text-[#fffbe0]'><label htmlFor="amount"> Purpose : </label>
             <input type="text" id='amount' className='bg-[#fffbe0] text-[#407088]  ' /></div>  
             <button className='px-2 text-center rounded-sm bg-[#fffbe0] text-[#407088]' onClick={requestLoanHandler}>Submit</button>
            

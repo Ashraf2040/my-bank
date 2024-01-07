@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.18",
+    "@heroicons/react": "^2.1.1",
     "@material-tailwind/react": "^2.1.4",
     "@mui/icons-material": "^5.14.18",
     "@nextui-org/react": "^2.2.9",

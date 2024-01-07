@@ -8,6 +8,10 @@ module.exports =withMT({
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+
+    screens:{
+     'xs' :'340px'
+    },
     extend: {
       backgroundImage: {
         'main-background2': 'url(/BAC.png)',

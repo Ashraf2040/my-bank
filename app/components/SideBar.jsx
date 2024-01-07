@@ -1,16 +1,22 @@
 
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link';
 
 const SideBar = () => {
 
+  const [menu,setMenu]= useState(false)
+
 
   return (
-    <div className='  py-12  h-screen px-2 mt-20'>
-          
-            
-       <ul className='flex flex-col text-[#407088] '>
+<>
+
+
+    <div className='  py-12   h-screen px-2 mt-20  hidden lg:block '>
+        
+        
+
+       <ul className='flex flex-col text-[#407088]  '>
 
           
            <Link href="" className='hover:bg-[#bbe4e9] bg-[#407088] text-[#fffbe0] border-b-2 relative w-full px-4  py-4 font-bold mb-1 rounded-lg' >  HOME    </Link>
@@ -30,6 +36,7 @@ const SideBar = () => {
 
 
     </div>
+    </>
   )
 }
 

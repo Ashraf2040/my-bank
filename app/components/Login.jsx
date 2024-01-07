@@ -45,7 +45,7 @@ const[email,setEmail]= useState("")
           <form className=' px-8 py-8 gap-4 flex flex-col w-[500px]' onSubmit={onSubmit}>
               
              <div className='flex justify-between text-[#222831]'><label className="text-[#222831]" htmlFor="email"> E-Mail :</label>
-          <input className='bg-gray-100 px-4 py-1 rounded-lg ' type='email'
+          <input className='bg-gray-100 px-4 py-1 rounded-lg ' type="email"
             id='email' placeholder='Email'
             value={email}
             onChange={(e) => setEmail(e.target.value)} />
