@@ -20,7 +20,7 @@
     "cookie-cutter": "^0.2.0",
     "cookies": "^0.8.0",
     "cookies-next": "^4.1.0",
-    "framer-motion": "^10.16.12",
+    "framer-motion": "^10.16.16",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.1",
